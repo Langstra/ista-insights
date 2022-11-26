@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  api: 'http://localhost:8888/.netlify/functions/main',
+  // api: 'https://ista-insights-api.netlify.app/api',
 };
 
 /*

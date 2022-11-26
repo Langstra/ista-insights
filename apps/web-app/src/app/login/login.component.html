@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-content>
+
+    <div class="alert" *ngIf="loginError">
+      <mat-icon aria-hidden="false" aria-label="Exclamation" fontIcon="warning"></mat-icon>
+      <span>Gebruikersnaam of wachtwoord verkeerd! Gebruik de juiste gegevens en probeer het opnieuw.</span>
+    </div>
+
+    <form [formGroup]="form">
+      <mat-form-field floatLabel="auto">
+        <mat-label>Gebruikersnaam</mat-label>
+        <input formControlName="username" matInput placeholder="naam" />
+      </mat-form-field>
+
+      <mat-form-field floatLabel="auto">
+        <mat-label>Wachtwoord</mat-label>
+        <input formControlName="password" type="password" matInput />
+      </mat-form-field>
+
+      <mat-checkbox formControlName="disclaimer"
+        >Ik heb de volgende informatie gelezen en ben akkoord</mat-checkbox
+      >
+      <button
+        [disabled]="form.invalid || isLoading"
+        (click)="login()"
+        mat-flat-button
+        color="primary"
+      >
+        Inloggen
+        <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+      </button>
+    </form>
+  </mat-card-content>
+</mat-card>

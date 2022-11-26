@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+mat-card {
+  max-width: 450px;
+  height: fit-content;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mat-progress-bar {
+  width: calc(100% + 32px);
+  transform: translateX(-16px);
+  border-radius: 0 0 4px 4px;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 2px solid red;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+.mat-icon {
+  overflow: visible;
+}

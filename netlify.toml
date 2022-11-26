@@ -1,0 +1,3 @@
+[build]
+  functions = "dist/apps/api"
+  autoLaunch = false

@@ -1,0 +1,8 @@
+<h1>Overzicht t/m {{ period | async }}</h1>
+<canvas
+  baseChart
+  [data]="barChartData$ | async"
+  [options]="barChartOptions"
+  [type]="'bar'"
+>
+</canvas>
